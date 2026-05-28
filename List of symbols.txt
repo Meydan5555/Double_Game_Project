@@ -1,0 +1,57 @@
+1. Spider
+2. Anchor
+3. Light bold
+4. Lips
+5. Gingerbread man
+6. Snowman
+7. Bomb
+8. Baby bottle
+9. Tree
+10. Cat
+11. Horse/Knight
+12. Carrot
+13. Lock
+14. Cactus
+15. Candle
+16. Clown
+17. Sol key/Music
+18. Key
+19. Scissors
+20. Target
+21. Dog
+22. Dobble/Hand
+23. Dinosaur/T-Rex
+24. Dolphin
+25. Pencil
+26. Heart
+27. Ladybug
+28. Daisy
+29. Maple leaf
+30. Fire
+31. Ghost
+32. Lightning
+33. Dragon
+34. Igloo
+35. Clock
+36. Water/Drop
+37. Ice cube
+38. Cheese
+39. Snowflake
+40. Bird
+41. Eye
+42. Hammer
+43. Glasses
+44. Turtle
+45. Moon
+46. Sun
+47. Apple
+48. Question mark
+49. Exclamation mark
+50. Stop sign
+51. Four-leaf clover
+52. Zebra
+53. Yin and Yang
+54. Car
+55. Spider's web
+56. Skull and crossbones
+57. Paint
