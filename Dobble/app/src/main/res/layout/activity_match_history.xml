@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dobble_background"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="BACK"
+            android:textStyle="bold"
+            android:textColor="@color/dobble_text_light"
+            android:backgroundTint="@color/dobble_purple" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="MATCH HISTORY"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/dobble_purple" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/emptyHistoryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No games played yet"
+        android:textSize="18sp"
+        android:textColor="@color/dobble_text_dark"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/historyProgressBar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:indeterminateTint="@color/dobble_purple" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matchesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="18dp" />
+
+</LinearLayout>

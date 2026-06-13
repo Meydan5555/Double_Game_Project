@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="3dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/dobble_purple_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VICTORY"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/dobble_purple" />
+
+        <TextView
+            android:id="@+id/opponentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Against: Player"
+            android:textSize="17sp"
+            android:textColor="@color/dobble_text_dark"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/matchScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 10 - 7"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dobble_yellow_dark"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/matchDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13/06/2026 16:30"
+            android:textSize="14sp"
+            android:textColor="@color/dobble_text_dark"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

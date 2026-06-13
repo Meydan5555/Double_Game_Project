@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="@color/dobble_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROOM"
+        android:textColor="@color/dobble_purple"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/roomCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000000"
+        android:textColor="@color/dobble_yellow_dark"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waiting for another player..."
+        android:textColor="@color/dobble_text_dark"
+        android:textSize="18sp"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:id="@+id/playerOneTextView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="Player 1"
+        android:textColor="@color/dobble_text_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/dobble_purple"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:id="@+id/playerTwoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="Waiting..."
+        android:textColor="@color/dobble_text_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/dobble_yellow"
+        android:layout_marginTop="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startGameButton"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="START GAME"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_light"
+        android:backgroundTint="@color/dobble_purple"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        app:cornerRadius="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/leaveRoomButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="LEAVE ROOM"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_dark"
+        android:backgroundTint="@color/dobble_yellow"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="18dp" />
+
+</LinearLayout>

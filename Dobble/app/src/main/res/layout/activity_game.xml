@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="18dp"
+    android:background="@color/dobble_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/roundTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Round 1"
+            android:textColor="@color/dobble_purple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 - 0"
+            android:textColor="@color/dobble_yellow_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CENTER CARD"
+        android:textColor="@color/dobble_text_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/centerCardImageView"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Center card" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOUR CARD"
+        android:textColor="@color/dobble_purple"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp" />
+
+    <FrameLayout
+        android:id="@+id/playerCardContainer"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/playerCardImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Player card" />
+
+        <GridLayout
+            android:id="@+id/cardClickGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="3"
+            android:columnCount="3">
+
+            <View
+                android:id="@+id/regionTopLeft"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionTopCenter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionTopRight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionCenterLeft"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionCenterCenter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionCenterRight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionBottomLeft"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionBottomCenter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+            <View
+                android:id="@+id/regionBottomRight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
+
+        </GridLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/gameStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find the matching symbol!"
+        android:textColor="@color/dobble_text_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp" />
+
+</LinearLayout>

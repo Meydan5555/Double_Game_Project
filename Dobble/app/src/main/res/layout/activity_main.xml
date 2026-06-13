@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="@color/dobble_background">
+
+    <TextView
+        android:id="@+id/userTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:textColor="@color/dobble_purple"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/serverStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connecting..."
+        android:textColor="@color/dobble_text_dark"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <ProgressBar
+        android:id="@+id/serverProgressBar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="18dp"
+        android:indeterminateTint="@color/dobble_purple" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createRoomButton"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="CREATE ROOM"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_light"
+        android:backgroundTint="@color/dobble_purple"
+        android:layout_marginTop="32dp"
+        app:cornerRadius="20dp" />
+
+    <EditText
+        android:id="@+id/roomCodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Room code"
+        android:inputType="number"
+        android:maxLength="6"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="18dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/joinRoomButton"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="JOIN ROOM"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_dark"
+        android:backgroundTint="@color/dobble_yellow"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reconnectButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="RECONNECT"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_dark"
+        android:backgroundTint="@color/dobble_yellow"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="18dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/matchHistoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="MATCH HISTORY"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_light"
+        android:backgroundTint="@color/dobble_purple"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="18dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="LOGOUT"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_light"
+        android:backgroundTint="@color/dobble_purple"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="18dp" />
+
+</LinearLayout>

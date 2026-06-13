@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@color/dobble_background">
+
+    <TextView
+        android:id="@+id/resultTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOU WON!"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_purple" />
+
+    <TextView
+        android:id="@+id/resultSubtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Great game!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_yellow_dark"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/finalScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 - 2"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_dark"
+        android:layout_marginTop="42dp" />
+
+    <TextView
+        android:id="@+id/playersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1 vs Player 2"
+        android:textSize="18sp"
+        android:textColor="@color/dobble_text_dark"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/saveStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result saved"
+        android:textSize="15sp"
+        android:textColor="@color/dobble_text_dark"
+        android:layout_marginTop="26dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backHomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="BACK TO HOME"
+        android:textStyle="bold"
+        android:textColor="@color/dobble_text_light"
+        android:backgroundTint="@color/dobble_purple"
+        android:layout_marginTop="42dp"
+        app:cornerRadius="20dp" />
+
+</LinearLayout>

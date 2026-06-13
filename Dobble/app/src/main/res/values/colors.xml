@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dobble_purple">#6A1B9A</color>
+    <color name="dobble_purple_dark">#3B075A</color>
+    <color name="dobble_purple_light">#9C4DCC</color>
+
+    <color name="dobble_yellow">#FFD600</color>
+    <color name="dobble_yellow_dark">#E6B800</color>
+
+    <color name="dobble_background">#F8F3FC</color>
+    <color name="dobble_surface">#FFFFFF</color>
+
+    <color name="dobble_text_dark">#25152D</color>
+    <color name="dobble_text_light">#FFFFFF</color>
+
+</resources>
