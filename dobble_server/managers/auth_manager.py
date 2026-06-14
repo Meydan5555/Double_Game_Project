@@ -44,6 +44,7 @@ class AuthManager:
                 )
             )
 
+        # חשוב: מחוץ ל-if, כדי שתמיד יהיה Firestore client
         self.database = firestore.client()
 
     def verify_connection(
