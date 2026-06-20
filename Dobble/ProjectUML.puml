@@ -1,0 +1,205 @@
+@startuml
+class me.meydan.dobble.GameOverActivity {
+# void onCreate(Bundle)
+- void returnHome()
++ void onBackPressed()
+}
+
+class me.meydan.dobble.SocketManager {
+- {static} String TAG
+- {static} String SERVER_URL
+- {static} SocketManager instance
+- Socket socket
++ {static} SocketManager getInstance()
++ void connect(String,ConnectionListener)
+- void registerBaseListeners(ConnectionListener)
++ Socket getSocket()
++ boolean isConnected()
++ void disconnect()
+}
+
+
+interface me.meydan.dobble.SocketManager$ConnectionListener {
+~ void onConnected()
+~ void onServerAccepted(JSONObject)
+~ void onError(String)
+~ void onDisconnected(String)
+}
+
+class me.meydan.dobble.GameActivity {
+- ImageView centerCardImageView
+- ImageView playerCardImageView
+- TextView roundTextView
+- TextView scoreTextView
+- TextView gameStatusTextView
+- String currentPlayerCardId
+- CardDataManager cardDataManager
+- boolean clickEnabled
+- Emitter.Listener gameStateListener
+- Emitter.Listener wrongSymbolListener
+- Emitter.Listener roundResultListener
+- Emitter.Listener gameOverListener
+# void onCreate(Bundle)
+- void setupCardRegions()
+- void setupRegion(int,String)
+- void flashRegion(View)
+- void sendSymbolClick(String)
+- void showToast(String)
+- void registerSocketListeners()
+- void openGameOver(JSONObject)
+- void updateGameState(JSONObject)
+- void showCard(ImageView,String)
+# void onDestroy()
+}
+
+
+class me.meydan.dobble.MainActivity {
+- FirebaseAuth firebaseAuth
+- FirebaseFirestore firestore
+- TextView userTextView
+- TextView serverStatusTextView
+- ProgressBar serverProgressBar
+- EditText roomCodeEditText
+- Button createRoomButton
+- Button joinRoomButton
+- Button reconnectButton
+- String displayName
+# void onCreate(Bundle)
+- void loadDisplayName(FirebaseUser)
+- void connectToServer()
+- void createRoom()
+- void joinRoom()
+- void handleRoomResponse(Object)
+- void openRoom(String,String)
+- void setConnectionLoading(boolean)
+- void setRoomButtonsEnabled(boolean)
+- void showToast(String)
+- void logout()
+- void openLogin()
+}
+
+
+class me.meydan.dobble.MatchHistoryActivity {
+- List<MatchItem> matches
+- Map<String,String> userNames
+- MatchHistoryAdapter adapter
+- ProgressBar historyProgressBar
+- TextView emptyHistoryTextView
+- FirebaseFirestore firestore
+- int pendingMatches
+# void onCreate(Bundle)
+- void loadMatches()
+- void loadSingleMatch(QueryDocumentSnapshot,String)
+- void loadOpponentName(String,int,int,boolean,Date)
+- void addMatch(String,int,int,boolean,Date)
+- void onMatchLoaded()
+- void finishLoading()
+- int numberToInt(Object)
+}
+
+
+class me.meydan.dobble.LoginActivity {
+- EditText emailEditText
+- EditText passwordEditText
+- ProgressBar progressBar
+- FirebaseAuth firebaseAuth
+# void onCreate(Bundle)
+# void onStart()
+- void login()
+- void setLoading(boolean)
+- void openMainActivity()
+}
+
+
+class me.meydan.dobble.MatchItem {
+- String opponentName
+- int myScore
+- int opponentScore
+- boolean won
+- Date createdAt
++ String getOpponentName()
++ int getMyScore()
++ int getOpponentScore()
++ boolean isWon()
++ Date getCreatedAt()
+}
+
+
+class me.meydan.dobble.RegisterActivity {
+- EditText nameEditText
+- EditText emailEditText
+- EditText passwordEditText
+- EditText confirmPasswordEditText
+- ProgressBar progressBar
+- Button createAccountButton
+- FirebaseAuth firebaseAuth
+- FirebaseFirestore firestore
+# void onCreate(Bundle)
+- void register()
+- void updateFirebaseProfile(FirebaseUser,String)
+- void saveUserToFirestore(FirebaseUser,String,String)
+- void setLoading(boolean)
+- void openMainActivity()
+}
+
+
+class me.meydan.dobble.MatchHistoryAdapter {
+- List<MatchItem> matches
++ MatchViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(MatchViewHolder,int)
++ int getItemCount()
+}
+
+
+class me.meydan.dobble.MatchHistoryAdapter$MatchViewHolder {
+~ TextView resultTextView
+~ TextView opponentTextView
+~ TextView matchScoreTextView
+~ TextView matchDateTextView
+}
+
+class me.meydan.dobble.CardDataManager {
+- {static} CardDataManager instance
+- Map<String,Map<String,String>> cards
++ {static} CardDataManager getInstance(Context)
+- void loadCards(Context)
++ String getSymbol(String,String)
+}
+
+
+class me.meydan.dobble.RoomActivity {
+- TextView roomCodeTextView
+- TextView statusTextView
+- TextView playerOneTextView
+- TextView playerTwoTextView
+- Button startGameButton
+- String roomCode
+- String currentUid
+- boolean isOwner
+- Emitter.Listener roomUpdatedListener
+- Emitter.Listener gameStartedListener
+# void onCreate(Bundle)
+- void registerSocketListeners()
+- void updateRoomUi(JSONObject)
+- void startGame()
+- void leaveRoom()
+- void openMain()
+- void showToast(String)
+# void onDestroy()
+}
+
+
+
+
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.GameOverActivity
+me.meydan.dobble.SocketManager +.. me.meydan.dobble.SocketManager$ConnectionListener
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.GameActivity
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.MatchHistoryActivity
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.LoginActivity
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.RegisterActivity
+me.meydan.dobble.Adapter <|-- me.meydan.dobble.MatchHistoryAdapter
+me.meydan.dobble.MatchHistoryAdapter +.. me.meydan.dobble.MatchHistoryAdapter$MatchViewHolder
+me.meydan.dobble.ViewHolder <|-- me.meydan.dobble.MatchHistoryAdapter$MatchViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- me.meydan.dobble.RoomActivity
+@enduml
