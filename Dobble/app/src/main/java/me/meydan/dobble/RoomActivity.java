@@ -201,7 +201,7 @@ public class RoomActivity extends AppCompatActivity {
         JSONObject data = new JSONObject();
 
         try {
-            data.put("targetScore", 2);
+            data.put("targetScore", 20);
         } catch (Exception ignored) {
         }
 
